@@ -1,0 +1,8 @@
+FROM tomcat:8.0.20-jre8
+COPY /target/SpringMVCHibernateWithSpringSecurityExample.war /usr/local/tomcat/webapps/
+COPY ./tomcat-users.xml	/usr/local/tomcat/conf/
+#EXPOSE 8085
+
+#build the image : docker build --tag myweb .
+#run the image : docker run -it -d --rm -p 8085:8080 myweb
+#facing issues with copy the files from other directories
